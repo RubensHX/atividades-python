@@ -55,3 +55,6 @@ class ListaFolhaDePagamento(Resource):
 
 api.add_resource(ListaFolhaDePagamento, '/folhas-de-pagamento')
 api.add_resource(FolhaDePagamento, '/folha-de-pagamento/<cpf>')
+
+if (__name__ == '__main__'):
+    app.run(debug=True)
