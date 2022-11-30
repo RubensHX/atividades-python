@@ -1,6 +1,8 @@
 from flask import Flask
 from flask_restx import reqparse, abort, Api, Resource
 
+from estoque import Produto, aborta_se_o_produto_nao_existe
+
 app = Flask(__name__)
 api = Api(app)
 
@@ -43,7 +45,7 @@ class FolhaDePagamento(Resource):
 
 class ListaFolhaDePagamento(Resource):
     def get(self):
-        return PRODUTOS
+        return Produto
 
     def post(self):
         args = parser.parse_args()
